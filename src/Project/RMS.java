@@ -890,8 +890,7 @@ public class RMS extends Application {
         stage.setTitle("Show Job Form");
         stage.show();
     }
-
-//Done
+    
     public void AdminInterviews(Stage stage) {
         Button backButton = new Button("Back");
         backButton.setOnAction(e -> AdminHome(stage));
@@ -954,7 +953,7 @@ public class RMS extends Application {
             deletebts[i].setId(String.valueOf(list.get(i).getID()));
             register.add(deletebts[i], 1, (i * 7) + 2);
             deletebts[i].setOnAction(e -> {
-                interview.Get(interview.getIndex(Integer.parseInt(((Button) e.getSource()).getId()))).setIsApproved(Boolean.FALSE);
+                interview.Get(interview.getIndex(Integer.parseInt(((Button) e.getSource()).getId()))).setIsApproved(false);
                 ShowinterviewsAgency(stage);
             });
             approvebts[i] = new Button("Approve");
@@ -983,7 +982,7 @@ public class RMS extends Application {
                     System.out.println(exh.toString());
                 }
                 System.out.println(Integer.parseInt(((DatePicker) e.getSource()).getId()));
-                interview.Get(interview.getIndex(Integer.parseInt(((DatePicker) e.getSource()).getId()))).setIsApproved(Boolean.TRUE);
+                interview.Get(interview.getIndex(Integer.parseInt(((DatePicker) e.getSource()).getId()))).setIsApproved(true);
                 //System.out.println(interview.Get(interview.getIndex(Integer.parseInt(((DatePicker) e.getSource()).getId()))).getIsApproved());
                 interview.Get(interview.getIndex(Integer.parseInt(((DatePicker) e.getSource()).getId()))).setInterviewDate(approvedate);
                 //System.out.println(interview.Get(interview.getIndex(Integer.parseInt(((DatePicker) e.getSource()).getId()))).getInterviewDate());

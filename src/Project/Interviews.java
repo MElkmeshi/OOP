@@ -72,7 +72,7 @@ public class Interviews implements CRUD {
     public ArrayList READ(String agencyUserName) {
         ArrayList<Interview> res = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
-            if ((list.get(i).getJob().getAgency().getUserName().equals(agencyUserName)) && (list.get(i).getIsApproved() == null || list.get(i).getIsApproved() == Boolean.TRUE)) {
+            if ((list.get(i).getJob().getAgency().getUserName().equals(agencyUserName)) && (list.get(i).getIsApproved() == null || list.get(i).getIsApproved() == true)) {
                 res.add(list.get(i));
             }
         }
