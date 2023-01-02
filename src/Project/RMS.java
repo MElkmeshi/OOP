@@ -675,9 +675,9 @@ public class RMS extends Application {
             deletebtns[i].setId(String.valueOf(emps.getUserName()));
             register.add(deletebtns[i], 1, (i * 5) + 2);
             deletebtns[i].setOnAction(e -> {
-                try {
-                    this.emp.Delete(this.emp.SearchByUserName(((Button) e.getSource()).getId()));
+                try {                    
                     interview.DELETE(emp.Get(emp.SearchByUserName(((Button) e.getSource()).getId())));
+                    this.emp.Delete(this.emp.SearchByUserName(((Button) e.getSource()).getId()));
                 } catch (IOException ex) {
                     System.out.println(ex.toString());
                 } finally {
